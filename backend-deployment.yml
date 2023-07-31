@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: backend-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: backend-deployment
   template:
     metadata:
       labels:
-        app: backend
+        app: backend-deployment
     spec:
       containers:
-      - name: backend
-        image: achoistic98/test_backend:latest
+      - name: backend-deployment
+        image: achoistic98/chat_backend:latest
         ports:
         - containerPort: 8080
         env:
