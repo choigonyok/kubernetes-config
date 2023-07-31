@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-deployment
+  template:
+    metadata:
+      labels:
+        app: frontend-deployment
+    spec:
+      containers:
+      - name: frontend-deployment
+        image: achoistic98/chat_frontend:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: WDS_SOCKET_PORT
+          value: 80
+        - name: REACT_APP_HOST_URL
+          value: http://localhost
+        - name: REACT_APP_WEBSOCKET_URL
+          value: ws://localhost
