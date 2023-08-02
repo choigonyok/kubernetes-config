@@ -19,4 +19,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MYSQL_HOST
-          value: mysql
+          value: "empty"
