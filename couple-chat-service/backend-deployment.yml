@@ -18,5 +18,15 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: MYSQL_HOST
-          value: "empty"
+        - name: DATABASE_HOST
+          value: database-service:3306
+        - name: FRONTEND_HOST
+          value: frontend-service:3000
+        - name: DATABASE_PASSWORD
+          value: "password"
+        - name: DATABASE_NAME
+          value: "chatdb"
+        - name: DATABASE_USER
+          value: "root"
+        - name: FILE_LOCATION
+          value: "localhost:8080/assets"
