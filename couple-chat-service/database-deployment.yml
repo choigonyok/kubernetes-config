@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: database-deployment
-          image: achoistic98/chat_database:latest
+          image: achoistic98/ccs_database:latest
           ports:
             - containerPort: 3306
           volumeMounts:

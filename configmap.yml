@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  HOST_URL: "backend-service:8000"
+  HOST_HTTP: "http://backend-service:8000"

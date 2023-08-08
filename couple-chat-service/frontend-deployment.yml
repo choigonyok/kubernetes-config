@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
       - name: frontend-deployment
-        image: achoistic98/chat_frontend:latest
+        image: achoistic98/css_frontend:latest
         ports:
         - containerPort: 3000
         env:
         - name: WDS_SOCKET_PORT
-          value: 80
+          value: "80"
         - name: REACT_APP_HOST_URL
           value: "backend-service:8080"
         - name: REACT_APP_WEBSOCKET_URL
