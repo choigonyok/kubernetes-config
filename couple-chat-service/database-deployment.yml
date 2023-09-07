@@ -29,5 +29,3 @@ spec:
         - name: database-volume
           hostPath:
             path: /volumes # Replace with the actual path on your host machine
-
-            
